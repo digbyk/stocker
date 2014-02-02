@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html data-ng-app="RabbitModule">
+
+<head>
+	<title>
+		Stocker
+	</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+	<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Princess+Sofia|Roboto' type='text/css'>
+	<link rel='stylesheet' href='/stylesheets/style.css'>
+
+	<link rel="shortcut icon" sizes="196x196" href="/images/favicon.png">
+	<link rel="shortcut icon" sizes="128x128" href="/images/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="/images/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="/images/favicon.png">
+
+</head>
+
+<body data-ng-controller="RabbitController">
+	<h1>
+		Stocker
+	</h1>
+	<p>Welcome to Stocker
+	</p>
+	<a href="/auth/google">Sign In with Google</a>
+	<table>
+		<thead>
+			<tr>
+				<th>Ticker</th>
+				<th>Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="price in prices">
+				<td>{{price.ticker}}</td>
+				<td data-ticker="{{price.ticker}}">{{price.value}}</td>
+			</tr>
+		</tbody>
+	</table>
+	+++{{stocks}}--- +++{{prices}}---
+	<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/application.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+	"name": "stocker",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "3.4.7",
+		"ejs": "~0.8.5",
+		"rabbit.js": "~0.3.1",
+		"http": "0.0.0",
+		"socket.io": "~0.9.16",
+		"passport": "~0.2.0",
+		"passport-google": "~0.3.0"
+	}
+}
